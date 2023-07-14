@@ -4,11 +4,14 @@ function countdown() {
     var distance = endDate - now;
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    document.getElementById("countdown").innerHTML = days + " giorni rimanenti";
-
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  
+    document.getElementById("countdown").innerHTML =
+      days + " giorni " + hours + " ore " + minutes + " minuti rimanenti";
+  
     if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "Scaduto";
+      document.getElementById("countdown").innerHTML = "Summer is here!";
     }
 }
 
