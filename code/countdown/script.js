@@ -1,5 +1,5 @@
 function countdown() {
-    var endDate = new Date("2023-07-28 18:00:00").getTime(); // Imposta la data di scadenza del countdown
+    var endDate = new Date("2023-12-22 18:00:00").getTime(); // Imposta la data di scadenza del countdown
     var now = new Date().getTime();
     var distance = endDate - now;
 
@@ -11,7 +11,7 @@ function countdown() {
       days + " giorni " + hours + " ore " + minutes + " minuti rimanenti";
   
     if (distance < 0) {
-      document.getElementById("countdown").innerHTML = "Summer is here!";
+      document.getElementById("countdown").innerHTML = "Christmas is here!";
     }
 }
 
